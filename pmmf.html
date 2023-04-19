@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <script src="script.js"></script>
+    <title>PMMF</title>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <img src="stelsen-logo.png" 
+             alt="Stelsen Logo"
+             class="Stelsen Logo">
+        <a href="index.html" class="back-button hover-underline-animation">BACK</a>
+    </header>
+
+    <div class="form-containers">
+        <form action="https://script.google.com/macros/s/AKfycbwmu57zpWQMCh6DON1mdSLp4enHGhinQIitODasNDm322yrQDRU8NPo2PzWw1n18u-j/exec" 
+              method="post" 
+              id="my-form">
+    
+        <h1 class="form-title">PMMF</h1>
+        
+        <!-- <fieldset> -->
+            <label for="Project"> <span>Project:</span>
+                <!-- DITO HERSHEY PROJECT -->
+                <select name="Project" id="Project" class="select-field">
+                    <option value="">--Select--</option>
+                    <option value="ZINNIA_TOWER">Zinia Tower</option>
+                    <option value="ESCALADE">Escalade</option>
+                    <option value="PENINSULA_GARDEN_MIDTOWN_HOMES">Peninsula Garden Midtown Homes</option>
+                </select>
+            </label>
+            
+            <!-- DITO HERSHYE BUILDING -->
+            <label for="Building"> <span>Building:</span>
+                <select name="Building" id="Building" class="select-field" name="Building"></select>
+            </label>
+        
+            <label for="Floor"><span>Floor:</span>
+                <input type="text" name="Floor" id="Floor" class="input-field">
+            </label>
+            
+            <label for="Unit"> <span>Unit:</span>
+                <input type="text" name="Unit" id="Unit" class="input-field">
+            </label>
+        
+            <!-- NOTE: LINK FROM DATABASE IF POSSIBLE -->
+            <label for="Location"> <span>Location:</span>
+                <input type="text" name="Location" id="Location" class="input-field">
+            </label>
+        <!-- </fieldset> -->
+    
+        <!-- <fieldset> -->
+            <label for="Device"> <span>Device:</span>
+
+                <!-- DITO SHEYSHEY  DEVICE-->
+                <select name="Device" id="Device" class="select-field">
+                    <option value="">(select one)</option>
+                    <option value="Module">Module</option>
+                    <option value="Strobe">Strobe</option>
+                </select>
+            </label>
+        
+            <label for="Model"> <span>Model:</span>
+                 <select name="Model" id="Model" class="select-field"></select>
+            </label>
+        
+            <label for="Serial"> <span>Serial:</span>
+                <input type="number" name="Serial" id="Serial" 
+                       placeholder="0000" class="number-field">
+            </label>
+        
+            <!--NOTE: VALUE SET TO RECENT DATE == JS -->
+            <label for="Date"><span>Date:</span>
+                <input type="date" name="Date" id="Date" class="date-field">
+            </label>
+        
+            <label for="Remarks"> <span>Remarks:</span>
+                <textarea name="Remarks" id="Remarks" class="textarea-field" row="4"></textarea>
+            </label>
+        <!-- </fieldset> -->
+
+        <div class="representative">
+            <div class="stelsen">
+                <!-- STELSEN REPRESENTATIVE NAME AND DATE -->
+                <!-- SIGNATURE PAD -->
+                <input type="text" id="stelsen-rep" class="input-field">
+                <span>STELSEN REPRESENTATIVE</span>
+    
+                <input type="datetime-local" id="Date" class="date-field">
+                <span>DATE</span>
+            </div>
+        </div>
+
+        <button type="submit">Send</button>
+        </form>
+            <script src="script2.js"></script>
+    </div>
+
+</body>
+</html>

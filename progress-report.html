@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>ISR</title>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <img src="stelsen-logo.png" 
+             alt="Stelsen Logo"
+             class="Stelsen Logo">
+        <a href="index.html" class="back-button hover-underline-animation">BACK</a>
+    </header>
+
+    <div class="form-containers">
+        <form action="https://script.google.com/macros/s/AKfycbyfYwQ6RZfTlFHO0x3U7OYFctAQSRVIAAWBaa8REunHhAJcSXpW_FHPrIhYPFZTJ0NuGg/exec" 
+              method="post" id="my-form"> 
+              
+            <h1>INSTALLATION SERVICE REPORT</h1>
+    
+            <fieldset>
+                <label for="customer-name"><span>Customer's Name:</span>
+                    <input id="customer-name" name="customer-name" 
+                           type="text" required class="input-field"/>
+                </label>
+    
+                <!-- <label for="Address">Address: 
+                    <input id="address" name="address" type="text" required />
+                </label> -->
+    
+                <label for="Project"> <span>Project:</span>
+                    <!-- DITO HERSHEY PROJECT -->
+                    <select name="Project" id="Project" class="select-field">
+                        <option value="">--Select--</option>
+                        <option value="ZINNIA_TOWER">Zinia Tower</option>
+                        <option value="ESCALADE">Escalade</option>
+                        <option value="PENINSULA_GARDEN_MIDTOWN_HOMES">Peninsula Garden Midtown Homes</option>
+                    </select>
+                </label>
+    
+                <label for="address"><span>Address:</span> 
+                    <input id="address" name="address" 
+                           type="text" required class="input-field"/>
+                </label>
+            </fieldset>
+    
+            <!-- SYSTEM CHECKBOX/OPTIONS -->
+            <fieldset>
+                  <h4>SYSTEM</h4>
+                    <label for="system"> 
+                        <input id="system" type="checkbox" name="system"  value="FDAS" class="checkbox-field"/> FDAS 
+                        <input id="system" type="checkbox" name="system"  value="CCTV" class="checkbox-field"/> CCTV  
+                        <input id="system" type="checkbox" name="system"  value="AHIS" class="checkbox-field"/> AHIS
+                        <input id="system" type="checkbox" name="system"  value="CRS" class="checkbox-field"/> CRS
+                        <input id="system" type="checkbox" name="system"  value="ACCESS" class="checkbox-field"/> ACCESS
+                        <input id="system" type="checkbox" name="system"  value="OTHER" class="checkbox-field"/> OTHER
+                    </label>
+    
+                    <label> 
+                        <input id="systemType" type="checkbox" name="systemType" value="SERVICE"/> SERVICE
+                        <input id="systemType" type="checkbox" name="systemType" value="CALL"/> CALL
+                        <input id="systemType" type="checkbox" name="systemType" value="INSPECTION"/> INSPECTION
+                        <input id="systemType" type="checkbox" name="systemType" value="WARRANTY"/> WARRANTY
+                        <input id="systemType" type="checkbox" name="systemType" value="PM"/> PM
+                        <input id="systemType" type="checkbox" name="systemType" value="INSTALLATION/TROUBLE SHOOTING"/> INSTALLATION/TROUBLE SHOOTING
+                    </label>
+            </fieldset>
+    
+            <!-- TIME ARRIVED/FINISHED -->
+            <fieldset>
+                <div class="time">
+                    <label for="time-arrived"><span>Time Arrived:</span> 
+                        <input id="time-arrived" type="time" class="time-field"
+                               name="time-arrived" required/> 
+                    </label>
+        
+                    <label for="time-finished"><span>Time Finished:</span> 
+                        <input id="time-finished" type="time" class="time-field"
+                               name="time-finished" required/> 
+                    </label>
+                </div>
+            </fieldset>
+            
+            <!-- REFERENCES -->
+            <fieldset>
+                <div class="references">
+                    <h5>REFERENCES</h5>
+                    <label for="inv"><span>INV #</span> 
+                        <input id="inv" type="text" name="inv" class="input-field"/> 
+                    </label>
+                    <label for="dr"><span>DR #</span>
+                        <input id="dr" type="text" name="dr" class="input-field"/>
+                    </label>
+                    <label for="sr"><span>SR #</span>
+                        <input id="sr" type="text" name="sr" class="input-field"/> 
+                    </label>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <!-- INITIAL FINDINGS -->
+                <label for="initial-findings"><span>INITIAL FINDINGS:</span>
+                    <textarea id="initial-findings" name="initial-findings" 
+                              rows="3" cols="30" placeholder="Type here" class="textarea-field"></textarea>
+                </label>
+                
+                <!-- WORK DONE -->
+                <label for="work-done"><span>WORK DONE:</span>
+                    <textarea id="work-done" name="work-done" 
+                              rows="3" placeholder="Type here" class="textarea-field"></textarea>
+                </label>
+                
+                <!-- STATUS (HEADEND) -->
+                <label for="status"><span>STATUS (HEADEND):</span>
+                    <textarea id="status" name="status" class="textarea-field"
+                              rows="3" placeholder="Type here"></textarea>
+                </label>
+                
+                <!-- RECOMMENDATION -->
+                <label for="recommendation"><span>RECOMMENDATION:</span>
+                    <textarea id="recommendation" name="recommendation" class="textarea-field"
+                              rows="3" placeholder="Type here"></textarea>
+                </label>
+            </fieldset>
+
+
+            <div class="representative">
+                <div class="stelsen">
+                    <!-- STELSEN REPRESENTATIVE NAME AND DATE -->
+                    <input type="text" id="stelsen-rep" class="input-field">
+                    <span>STELSEN REPRESENTATIVE</span>
+        
+                    <input type="datetime-local" id="Date" class="date-field">
+                    <span>DATE</span>
+                </div>
+    
+                <div class="customer">
+                    <!-- INPUT SIGNATURE PAD-->
+                    <!-- CUSTOMER NAME AND SIGNATURE -->
+                    <input type="text" id="customer-rep" class="input-field">
+                    <span>SIGNATURE OF CUSTOMER REPRESENTATIVE</span>
+        
+                    <input type="text" id="customer-rep" class="input-field">
+                    <span>PRINTED NAME</span>
+                </div>
+            </div>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</body>
+</html>

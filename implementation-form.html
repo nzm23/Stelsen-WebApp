@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <script src="script.js"></script>
+    <script src="checkboxContent.js"></script>
+    <title>Implementation Form</title>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <img src="stelsen-logo.png" 
+             alt="Stelsen Logo"
+             class="Stelsen Logo">
+        <a href="index.html" class="back-button hover-underline-animation">BACK</a>
+    </header>
+
+    <!-- FORM -->
+    <div class="form-containers gradient-background">
+
+        <form action="https://script.google.com/macros/s/AKfycbxLkThlX6yFGkWgCCQaP9j1cRsBBQzwNqgPcFktxOPIq87hKDSEyHOo4vS-2LnwZ062/exec" 
+              method="post" id="my-form" >
+    
+            <h1>PROJECT IMPLEMENTATION CHECKLIST</h1>
+            
+            <fieldset>
+                <label for="Project"> <span>Project:</span>
+
+                    <select name="Project" id="Project" class="select-field">
+                        <option value="">--Select--</option>
+                        <option value="ZINNIA_TOWER">Zinia Tower</option>
+                        <option value="ESCALADE">Escalade</option>
+                        <option value="PENINSULA_GARDEN_MIDTOWN_HOMES">Peninsula Garden Midtown Homes</option>
+                    </select>
+                </label>
+    
+                <label for="location">Location: 
+                    <input id="location" name="location" type="text" class="input-field" required />
+                </label>
+            </fieldset>
+    
+            <div class="implement-type">
+                <input name="implement-type" type="checkbox" value="PRE-IMPLEMENTATION" class="checkbox-field"
+                       id="pre" onclick="myFunction()"> PRE-IMPLEMENTATION
+                <input name="implement-type" type="checkbox"  value="DURING-IMPLEMENTATION" class="checkbox-field"
+                       id="during" onclick="myFunction()"> DURING IMPLEMENTATION
+            </div>
+
+            <!-- PRE-IMPLEMENTATION QUESTIONS -->
+            <div id="preImplementation">
+                <fieldset>
+                    <span>PRE-IMPLEMENTATION</span>
+                    <table>
+                        <thead>
+                            <th></th>
+  			                <th>Yes</th>
+  			                <th>No</th>
+    		                <th>Remarks</th>
+                        </thead>
+
+                        <tbody>
+                            <!-- Q1 -->
+                            <tr>
+                                <td><label for="1-PI">1. Review the riser diagram.</label></td>
+                                    <td><input id="1-PI" type="radio" name="1-PI"  value="Yes"/></td>
+                                    <td><input id="1-PI" type="radio" name="1-PI"  value="No"/></td>
+                                    <td><textarea id="1-PI" name="1-PI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q2 -->
+                            <tr>
+                                <td><label for="2-PI">2. Review the breakdown of devices per floor.</label></td>
+                                    <td><input id="2-PI" type="radio" name="2-PI"  value="Yes"/> </td>
+                                    <td><input id="2-PI" type="radio" name="2-PI"  value="No"/> </td>
+                                    <td><textarea id="2-PI" name="2-PI-R" type="text"></textarea> </td>
+                            </tr>
+
+                            <!-- Q3 -->
+                            <tr>
+                                <td><label for="3-PI">3. Review the no. of loop based on design.</label></td>
+                                    <td><input id="3-PI" type="radio" name="3-PI"  value="Yes"/> </td>
+                                    <td><input id="3-PI" type="radio" name="3-PI"  value="No"/> </td>
+                                    <td><textarea id="3-PI" name="3-PI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q4 -->
+                            <tr>
+                                <td><label for="4-PI">4. Review the no. of devices connected to BPS based on the design.</label></td>
+                                    <td><input id="4-PI" type="radio" name="4-PI"  value="Yes"/></td>
+                                    <td><input id="4-PI" type="radio" name="4-PI"  value="No"/></td>
+                                    <td><textarea id="4-PI" name="4-PI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q5 -->
+                            <tr>
+                                <td><label for="5-PI">5. Review the no. of vertical wires based on the design.</label></td>
+                                    <td><input id="5-PI" type="radio" name="5-PI"  value="Yes"/></td>
+                                    <td><input id="5-PI" type="radio" name="5-PI"  value="No"/></td>
+                                    <td><textarea id="5-PI" name="5-PI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q6 -->
+                            <tr>
+                                <td><label for="6-PI">6. Review the interfacing modules needed based on the design.</label></td>
+                                    <td><input id="6-PI" type="radio" name="6-PI"  value="Yes"/></td>
+                                    <td><input id="6-PI" type="radio" name="6-PI"  value="No"/></td>
+                                    <td><textarea id="6-PI" name="6-PI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q7 -->
+                            <tr>
+                                <td><label for="7-PI">7. Check the actual location of pullbox for annunciator modules.</label></td>
+                                    <td><input id="7-PI" type="radio" name="7-PI"  value="Yes"/></td>
+                                    <td><input id="7-PI" type="radio" name="7-PI"  value="No"/> </td>
+                                    <td><textarea id="7-PI" name="7-PI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q8 -->
+                            <tr>
+                                <td><label for="8-PI">8. Check the actual location of BPS.</label></td>
+                                    <td><input id="8-PI" type="radio" name="8-PI"  value="Yes"/> </td>
+                                    <td><input id="8-PI" type="radio" name="8-PI"  value="No"/>  </td>
+                                    <td><textarea id="8-PI" name="8-PI-R" type="text"></textarea> </td>
+                            </tr>
+
+                            <!-- Q9 -->
+                            <tr>
+                                <td><label for="9-PI">9. Check the 220Vac provision for BPS.</label></td>
+                                    <td><input id="9-PI" type="radio" name="9-PI"  value="Yes"/></td>
+                                    <td><input id="9-PI" type="radio" name="9-PI"  value="No"/> </td>
+                                    <td><textarea id="9-PI" name="9-PI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q10 -->
+                            <tr>
+                                <td><label for="10-PI">10. Check the actual location of FACP.</label></td>
+                                    <td><input id="10-PI" type="radio" name="10-PI"  value="Yes"/></td>
+                                    <td><input id="10-PI" type="radio" name="10-PI"  value="No"/> </td>
+                                    <td><textarea id="10-PI" name="10-PI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q11 -->
+                            <tr>
+                                <td><label for="11-PI">11. Check the 220Vac provision for FACP.</label></td>
+                                    <td><input id="11-PI" type="radio" name="11-PI"  value="Yes"/></td>
+                                    <td><input id="11-PI" type="radio" name="11-PI"  value="No"/> </td>
+                                    <td><textarea id="11-PI" name="11-PI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q12 -->
+                            <tr>
+                                <td><label for="12-PI">12. Submit the RFA shop drawing for the location of FAP, AVR, Battery Cabinet, and BPS.</label></td>
+                                    <td><input id="12-PI" type="radio" name="12-PI"  value="Yes"/></td>
+                                    <td><input id="12-PI" type="radio" name="12-PI"  value="No"/> </td>
+                                    <td><textarea id="12-PI" name="12-PI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q13 -->
+                            <tr>
+                                <td><label for="13-PI">13. Submit the RFA riser diagram (If not yet submitted during bidding).</label></td>
+                                    <td><input id="13-PI" type="radio" name="13-PI"  value="Yes"/></td>
+                                    <td><input id="13-PI" type="radio" name="13-PI"  value="No"/> </td>
+                                    <td><textarea id="13-PI" name="13-PI-R" type="text"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </fieldset>
+            </div>
+
+            <!-- DURING IMPLEMENTATION QUESTIONS -->
+            <div id="duringImplementation">
+                <fieldset>
+                    <span>DURING IMPLEMENTATION PRIOR TO INSTALLATION</span>
+                    <table>
+                        <thead>
+                            <th></th>
+  			                <th>Yes</th>
+  			                <th>No</th>
+    		                <th>Remarks</th>
+                        </thead>
+
+                        <tbody>
+                            <!-- Q1 -->
+                            <tr>
+                                <td><label for="1-DI">1. Check and test the horizontal wires of detectors and MPS (If shorted/Grounded).</label></td>
+                                    <td><input id="1-DI" type="radio" name="1-DI"  value="Yes"/></td>
+                                    <td><input id="1-DI" type="radio" name="1-DI"  value="No"/> </td>
+                                    <td><textarea id="1-DI" name="1-DI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q2 -->
+                            <tr>
+                                <td><label for="2-DI">2. Check and test the Horn strobe's or speaker strobe's horizontal wires (If shorted/Grounded).</label></td>
+                                    <td><input id="2-DI" type="radio" name="2-DI"  value="Yes"/></td>
+                                    <td><input id="2-DI" type="radio" name="2-DI"  value="No"/> </td>
+                                    <td><textarea id="2-DI" name="2-DI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q3 -->
+                            <tr>
+                                <td><label for="3-DI">3. Check and test the wires of the Telephone Jack (If shorted/Grounded).</label></td>
+                                    <td><input id="3-DI" type="radio" name="3-DI"  value="Yes"/></td>
+                                    <td><input id="3-DI" type="radio" name="3-DI"  value="No"/> </td>
+                                    <td><textarea id="3-DI" name="3-DI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q4 -->
+                            <tr>
+                                <td><label for="4-DI">4. Check and test the horizontal wires of modules (If shorted/Grounded).</label></td>
+                                    <td><input id="4-DI" type="radio" name="4-DI"  value="Yes"/></td>
+                                    <td><input id="4-DI" type="radio" name="4-DI"  value="No"/> </td>
+                                    <td><textarea id="4-DI" name="4-DI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q5 -->
+                            <tr>
+                                <td><label for="5-DI">5. Check and test the vertical wires of the data line as per design (If shorted/Grounded).</label></td>
+                                    <td><input id="5-DI" type="radio" name="5-DI"  value="Yes"/></td>
+                                    <td><input id="5-DI" type="radio" name="5-DI"  value="No"/> </td>
+                                    <td><textarea id="5-DI" name="5-DI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q6 -->
+                            <tr>
+                                <td><label for="6-DI">6. Check and test the vertical wires of the Annunciator (If shorted/Grounded).</label></td>
+                                    <td><input id="6-DI" type="radio" name="6-DI"  value="Yes"/></td>
+                                    <td><input id="6-DI" type="radio" name="6-DI"  value="No"/> </td>
+                                    <td><textarea id="6-DI" name="6-DI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <!-- Q7 -->
+                            <tr>
+                                <td><label for="7-DI">7. Check and test the vertical wires for 24v of Sim Power (If shorted/Grounded).</label></td>
+                                    <td><input id="7-DI" type="radio" name="7-DI"  value="Yes"/></td>
+                                    <td><input id="7-DI" type="radio" name="7-DI"  value="No"/> </td>
+                                    <td><textarea id="7-DI" name="7-DI-R" type="text"></textarea></td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="8-DI">8. Check and test the vertical wires of 24V of the Horn strobe /speaker strobe (If shorted/Grounded).</label></td>
+                                    <td><input id="8-DI" type="radio" name="8-DI"  value="Yes"/></td>
+                                    <td><input id="8-DI" type="radio" name="8-DI"  value="No"/> </td>
+                                    <td><textarea id="8-DI" name="8-DI-R" type="text"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </div>
+
+            <!-- NOTE -->
+            <fieldset>
+                <span>NOTE</span>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Yes</th>
+                        <th>No</th>
+                      <th>Remarks</th>
+                    </thead>
+
+                    <tbody>
+                        <!-- 1N -->
+                        <tr>
+                            <td><label for="1-N">1. If our scope is installation only. We will only witness the continuity testing of all installed wires.</label></td>
+                                <td><input id="1-N" type="radio" name="1-N"  value="Yes"/></td>
+                                <td><input id="1-N" type="radio" name="1-N"  value="No"/> </td>
+                                <td><textarea id="1-N" name="1-N-R" type="text"></textarea></td>
+                        </tr>
+
+                        <!-- 2N -->
+                        <tr>
+                            <td><label for="2-N">2. Double-check the tagging of wires during testing.</label></td>
+                                <td><input id="2-N" type="radio" name="2-N"  value="Yes"/></td>
+                                <td><input id="2-N" type="radio" name="2-N"  value="No"/> </td>
+                                <td><textarea id="2-N" name="2-N-R" type="text"></textarea></td>
+                        </tr>
+
+                        <!-- 3N -->
+                        <tr>
+                            <td><label for="3-N">3. The electrical contractor needs to provide a continuity test form.</label></td>
+                                <td><input id="3-N" type="radio" name="3-N"  value="Yes"/></td>
+                                <td><input id="3-N" type="radio" name="3-N"  value="No"/> </td>
+                                <td><textarea id="3-N" name="3-N-R" type="text"></textarea></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </fieldset>
+    
+            <!-- WIRING-INS -->
+            <fieldset>
+                <span>WIRING-INS</span>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Yes</th>
+                        <th>No</th>
+                        <th>Remarks</th>
+                    </thead>
+
+                    <tbody>
+                        <!-- 1WI -->
+                        <tr>
+                            <td><label for="1-WI">1. Wiring-ins as per the approved location and design.</label></td>
+                                <td><input id="1-WI" type="radio" name="1-WI"  value="Yes"/></td>
+                                <td><input id="1-WI" type="radio" name="1-WI"  value="No"/> </td>
+                                <td><textarea id="1-WI" name="1-WI-R" type="text"></textarea></td>
+                        </tr>
+
+                        <!-- 2WI -->
+                        <tr>
+                            <td><label for="2-WI">2. Install flexible metal conduit for droppings. (1.5m-standard)</label></td>
+                                <td><input id="2-WI" type="radio" name="2-WI"  value="Yes"/></td>
+                                <td><input id="2-WI" type="radio" name="2-WI"  value="No"/> </td>
+                                <td><textarea id="2-WI" name="2-WI-R" type="text"></textarea></td>
+                        </tr>
+
+                        <!-- 3WI -->
+                        <tr>
+                            <td><label for="3-WI">3. Conduct continuity testing of all installed wires.</label></td>
+                                <td><input id="3-WI" type="radio" name="3-WI"  value="Yes"/></td>
+                                <td><input id="3-WI" type="radio" name="3-WI"  value="No"/> </td>
+                                <td><textarea id="3-WI" name="3-WI-R" type="text"></textarea></td>
+                        </tr>
+
+                        <!-- 4WI -->
+                        <tr>
+                            <td><label for="4-WI">4. Record the testing result on the Continuity test form.</label></td>
+                                <td><input id="4-WI" type="radio" name="4-WI"  value="Yes"/></td>
+                                <td><input id="4-WI" type="radio" name="4-WI"  value="No"/> </td>
+                                <td><textarea id="4-WI" name="4-WI-R" type="text"></textarea></td>
+                        </tr>
+
+                        <!-- 5WI -->
+                        <tr>
+                            <td><label for="5-WI">5. Submit to the client for their signature.</label></td>
+                                <td><input id="5-WI" type="radio" name="5-WI"  value="Yes"/></td>
+                                <td><input id="5-WI" type="radio" name="5-WI"  value="No"/> </td>
+                                <td><textarea id="5-WI" name="5-WI-R" type="text"></textarea></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </fieldset>
+    
+            <!-- INSTALLATION OF DEVICES -->
+            <fieldset>
+                <span>INSTALLATION OF DEVICES</span>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Yes</th>
+                        <th>No</th>
+                        <th>Remarks</th>
+                    </thead>
+
+                    <tbody>
+                        <!-- 1ID -->
+                        <tr>
+                            <td><label for="1-ID">1. Install and terminate the device as per the approved location.</label></td>
+                                <td><input id="1-ID" type="radio" name="1-ID"  value="Yes"/></td>
+                                <td><input id="1-ID" type="radio" name="1-ID"  value="No"/> </td>
+                                <td><textarea id="1-ID" name="1-ID-R" type="text"></textarea></td>
+                        </tr>                     
+
+                        <!-- 2ID -->
+                        <tr>
+                            <td><label for="2-ID">2. Provide a plastic cover for protection or don't remove the cover.</label></td>
+                                <td><input id="2-ID" type="radio" name="2-ID"  value="Yes"/></td>
+                                <td><input id="2-ID" type="radio" name="2-ID"  value="No"/> </td>
+                                <td><textarea id="2-ID" name="2-ID-R" type="text"></textarea></td>
+                        </tr>                     
+
+                        <!-- 3ID -->
+                        <tr>
+                            <td><label for="3-ID">3. Collect the serial number and attached on keyplan for proper naming on programming.</label></td>
+                                <td><input id="3-ID" type="radio" name="3-ID"  value="Yes"/></td>
+                                <td><input id="3-ID" type="radio" name="3-ID"  value="No"/> </td>
+                                <td><textarea id="3-ID" name="3-ID-R" type="text"></textarea></td>
+                        </tr>                     
+
+                    </tbody>
+                </table>
+            </fieldset>
+    
+            <!-- INSTALLATION OF FACP -->
+            <fieldset>
+                <span>INSTALLATION OF FACP</span>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Yes</th>
+                        <th>No</th>
+                        <th>Remarks</th>
+                    </thead>
+
+                    <tbody>
+                        <!-- 1IF -->
+                        <tr>
+                            <td><label for="1-IF">1. Install FACP Cabinet as per approved location.</label></td>
+                                <td><input id="1-IF" type="radio" name="1-IF"  value="Yes"/></td>
+                                <td><input id="1-IF" type="radio" name="1-IF"  value="No"/> </td>
+                                <td><textarea id="1-IF" name="1-IF-R" type="text"></textarea></td>
+                        </tr>                        
+
+                        <!-- 2IF -->
+                        <tr>
+                            <td><label for="2-IF">2. Install all elements inside the FACP cabinet.</label></td>
+                                <td><input id="2-IF" type="radio" name="2-IF"  value="Yes"/></td>
+                                <td><input id="2-IF" type="radio" name="2-IF"  value="No"/> </td>
+                                <td><textarea id="2-IF" name="2-IF-R" type="text"></textarea></td>
+                        </tr>                        
+
+                        <!-- 3IF -->
+                        <tr>
+                            <td><label for="3-IF">3. Terminate the wires for the data line.</label></td>
+                                <td><input id="3-IF" type="radio" name="3-IF"  value="Yes"/></td>
+                                <td><input id="3-IF" type="radio" name="3-IF"  value="No"/> </td>
+                                <td><textarea id="3-IF" name="3-IF-R" type="text"></textarea></td>
+                        </tr>                        
+
+                    </tbody>
+                </table>
+            </fieldset>
+    
+            <!-- INSTALLATION OF AVR -->
+            <fieldset>
+                <span>INSTALLATION OF AVR</span>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Yes</th>
+                        <th>No</th>
+                        <th>Remarks</th>
+                    </thead>
+
+                    <tbody>
+                        <!-- 1IA -->
+                        <tr>
+                            <td><label for="1-IA">1. Check the 220Vac provision.</label></td>
+                                <td><input id="1-IA" type="radio" name="1-IA"  value="Yes"/></td>
+                                <td><input id="1-IA" type="radio" name="1-IA"  value="No"/> </td>
+                                <td><textarea id="1-IA" name="1-IA-R" type="text"></textarea></td>
+                        </tr>
+
+                        <!-- 2IA -->
+                        <tr>
+                            <td><label for="2-IA">2. Install AVR as per the approved location.</label></td>
+                                <td><input id="2-IA" type="radio" name="2-IA"  value="Yes"/></td>
+                                <td><input id="2-IA" type="radio" name="2-IA"  value="No"/> </td>
+                                <td><textarea id="2-IA" name="2-IA-R" type="text"></textarea></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </fieldset>
+    
+            <!-- INSTALLATION OF BPS -->
+            <fieldset>
+                <span>INSTALLATION OF BPS</span>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Yes</th>
+                        <th>No</th>
+                        <th>Remarks</th>
+                    </thead>
+
+                    <tbody>
+                        <!-- 1IB -->
+                        <tr>
+                            <td><label for="1-IB">1. Install BPS as per the approved location.</label></td>
+                                <td><input id="1-IB" type="radio" name="1-IB"  value="Yes"/></td>
+                                <td><input id="1-IB" type="radio" name="1-IB"  value="No"/> </td>
+                                <td><textarea id="1-IB" name="1-IB-R" type="text"></textarea></td>
+                        </tr>
+
+                        <!-- 2IB -->
+                        <tr>
+                            <td><label for="2-IB">2. Terminate the wires for 24v.</label></td>
+                                <td><input id="2-IB" type="radio" name="2-IB"  value="Yes"/></td>
+                                <td><input id="2-IB" type="radio" name="2-IB"  value="No"/> </td>
+                                <td><textarea id="2-IB" name="2-IB-R" type="text"></textarea></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </fieldset>
+
+            <div class="representative">
+                <div class="stelsen">
+                    <!-- STELSEN REPRESENTATIVE NAME AND DATE -->
+                    <!-- SIGNATURE PAD -->
+                    <input type="text" id="stelsen-rep" class="input-field">
+                    <span>STELSEN REPRESENTATIVE</span>
+        
+                    <input type="datetime-local" id="Date" class="date-field">
+                    <span>DATE</span>
+                </div>
+            </div>
+    
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</body>
+</html>

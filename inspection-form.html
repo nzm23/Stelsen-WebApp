@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    
+    <!-- NAVIGATION BAR -->
+    <header>
+        <img src="stelsen-logo.png" 
+             alt="Stelsen Logo"
+             class="Stelsen Logo">
+        <a href="index.html" class="back-button hover-underline-animation">BACK</a>
+    </header>
+    <div class="form-containers">
+
+        <form action="https://script.google.com/macros/s/AKfycbxXKSNp_dx9ySiB1G5b_GO9TW2NzA_f3ZDkOyg1TGQfHM4n24Y0FMEosE-nTTg4Rwqz/exec" 
+              method="post" 
+              id="my-form"> 
+            <h1>INSPECTION FORM</h1>
+    
+            <fieldset>
+                <label for="Project"> <span>Project:</span>
+                    <!-- DITO HERSHEY PROJECT -->
+                    <select name="Project" id="Project" class="select-field">
+                        <option value="">--Select--</option>
+                        <option value="ZINNIA_TOWER">Zinia Tower</option>
+                        <option value="ESCALADE">Escalade</option>
+                        <option value="PENINSULA_GARDEN_MIDTOWN_HOMES">Peninsula Garden Midtown Homes</option>
+                    </select>
+                </label>
+    
+                <label for="location"><span>Location: </span>
+                    <input id="location" name="location" type="text"  class="input-field" required />
+                </label>
+    
+                <label for="system"><span>System: </span>
+                    <input id="system" name="system" type="text"  class="input-field" required />
+                </label>
+            </fieldset>
+    
+            <!-- SYSTEM CHECKBOX/OPTIONS -->
+            <fieldset>
+                <label for="description"><span>Description: </span>
+                    <input id="description" name="description" type="text"  class="input-field" required />
+                </label>
+    
+                <label for="error"><span>Trouble Report: </span>
+                    <input id="error" name="error" type="text"  class="input-field" required />
+                </label>
+    
+                <label for="work-done"><span>Work Done: </span>
+                    <input id="work-done" name="work-done" type="text"  class="input-field" required />
+                </label>
+    
+                <label for="status"><span>Status: </span>
+                    <input id="status" name="status" type="text"  class="input-field" required />
+                </label>
+    
+                <label for="recommendation"><span>Recommendation: </span>
+                    <input id="recommendation" name="recommendation" type="text"  class="input-field" required />
+                </label>
+            </fieldset>
+
+            <div class="representative">
+                <div class="stelsen">
+                    <!-- STELSEN REPRESENTATIVE NAME AND DATE -->
+                    <!-- SIGNATURE PAD -->
+                    <input type="text" id="stelsen-rep" class="input-field">
+                    <span>STELSEN REPRESENTATIVE</span>
+        
+                    <input type="datetime-local" id="Date" class="date-field">
+                    <span>DATE</span>
+                </div>
+            </div>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
